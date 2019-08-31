@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FINAL FANTASY XVI</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/game.css" />
+
+</head>
+<body>
+<div class="begin display" id="startPage">
+        <audio autoplay class="display">
+                <source src="sounds/start.mp3" type="audio/mpeg">
+              </audio> 
+    <img class="background" src="./assets/intro.jpg" alt="Image de fond" />
+    <div class="firstTitle" id="startText"><p>Riyad Achour</p>
+    <p>Micael Dos Santos</p>
+    <p>Cédric Leprohon</p>
+    <p>Florian Gustin</p>
+    <p>AS</p>
+    <p>CODING ENIX STUDIO</p>
+    <p>- Presents -</p></div>
+    <div class="firstTitle display" id="startlogo">
+        <img id="" class="" src="./assets/logo.png" alt="Titre principal" />
+        <p>Press key to start</p>
+    </div>
+</div>
+
+    <div id="start" class="container-fluid"> <!-- REMETTRE DISPLAY -->
+
+        <!-- cacher la classe background après l'intro -->
+        <!-- Ligne LOGO -->
+        <div class="row">
+            <div class="logoCenter col-md-12">
+                <img class ="" src="./assets/logo.png" alt="">
+            </div>
+        </div>
+        <!-- Ligne BOX JEU -->
+        <div class="row">
+                <div id="game" class="col-md-10 offset-md-1 day">
+                    <!-- <div id="scoring" class="display">
+                        <ul id="list">
+                        </ul>
+                        <button id="restart" class="btn btn-primary">
+                                Recommencer la partie
+                        </button>
+                    </div>-->
+                    <div id="ff" class="container-fluid">
+                        <div id="hpAndShop" class="row">
+                            <div class="absoluteGauche col-md-2">
+                                     <div id="playerBar" class="playerbar progress display">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%"></div>
+                                    </div>
+                            </div>
+                            <div class="absoluteDroite col-md-2">
+                               <div id="monsterBar" class="monsterbar progress display">
+                                   <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 100%"></div>
+                               </div> 
+                            </div>
+                            <div id="shop" class="col-md-4 display">
+                                <div class="row bgGrey">
+                                    <div class="col itemBox" id="buy1">
+                                        <div class="fas fa-prescription-bottle red"></div>
+                                        <div class="itemDesc"><p>Potion de force</p>
+                                        <p><span class="fas fa-coins or"></span> 2</p></div>
+                                    </div>
+                                    <div class="col itemBox" id="buy2">
+                                            <div class="fas fa-prescription-bottle violet"></div>
+                                            <div class="itemDesc"><p>Potion d'agilité</p>
+                                            <p><span class="fas fa-coins or"></span> 2</p></div>
+                                    </div>
+                                    <div class="w-100"></div>
+                                    <div class="col itemBox" id="buy3">
+                                            <div class="fas fa-prescription-bottle blue"></div>
+                                            <div class="itemDesc"><p>Potion d'endurance</p>
+                                            <p><span class="fas fa-coins"></span> 2</p></div>
+                                    </div>
+                                    <div class="col itemBox" id="buy4">
+                                            <div class="fas fa-prescription-bottle green"></div>
+                                            <div class="itemDesc"><p>Potion de soin</p>
+                                            <p><span class="fas fa-coins or"></span> 5</p></div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div id="fight" class="row">
+                            <div id="fightPlayer" class="col-md-4 display">
+                                <img src="assets/player.png" id="imgPlayer" >
+                            </div>
+                            <div id="fightArea" class="col-md-4">
+                                <!-- ZONE DE COMBAT -->
+                            </div>
+                            <div id="fightMonster" class="col-md-4 display">
+                                <img src="assets/dragon.png" id="imgDragon">
+                            </div>
+                        </div>
+                        <div id="chatAndInventory"class="row">
+                            <div id="box" class="col-md-6">
+                                <!-- PLACEMENT CHATBOX -->
+                            </div>
+                            <div id="inventory" class="col-md-5 offset-md-1 display">
+                                    <div class="row bgGrey">
+                                        <div class="col inventoryBox" id="item1">
+                                            <div class="big fas fa-prescription-bottle red"></div>
+                                            <div class="inventoryDesc">
+                                            <p>x <span id="nbItem1"></span></p></div>
+                                        </div>
+                                        <div class="col inventoryBox" id="item2">
+                                                <div class="big fas fa-prescription-bottle violet"></div>
+                                                <div class="inventoryDesc">
+                                                <p>x <span id="nbItem2"></span></p></div>
+                                        </div>
+                                        <div class="col inventoryBox" id="item3">
+                                                <div class="big fas fa-prescription-bottle blue "></div>
+                                                <div class="inventoryDesc">
+                                                <p>x <span id="nbItem3"></span></p></div>
+                                        </div>
+                                        <div class="col inventoryBox" id="item4">
+                                                <div class="big fas fa-prescription-bottle green"></div>
+                                                <div class="inventoryDesc">
+                                                <p>x <span id="nbItem4"></span></p></div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div id="buttons" class="row">
+                                    <div class="col">
+                                        <button id="goaventure" type="button" class="btn btn-dark">
+                                            Partir à l'aventure
+                                        </button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="goshop" type="button" class="btn btn-secondary display">
+                                            Aller à la boutique
+                                        </button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="leaveshop" class="btn btn-secondary display">
+                                            Ouvrir l'inventaire
+                                        </button>
+                                    </div>
+                                    <div class="col">
+                                        <button id="restart" type="button" class="btn btn-dark display">
+                                            <a href="index.html">Recommencer la partie</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>  
+        </div>
+    </div>
+
+<script src="./js/functions.js"></script>
+<script src="./js/globalvariables.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
+
+<!--
+    monstre : <i class="fas fa-dragon"></i>
+    potion heal : <i class="fas fa-prescription-bottle-alt"></i>
+    potion  <i class="fas fa-prescription-bottle"></i>
+
+-->
